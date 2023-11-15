@@ -1,0 +1,13 @@
+version: '2'
+services:
+  sample-server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: sample-server
+    volumes:
+      - ./app/:/app
+    ports:
+      - "80:80"
+      - "8080:8080"
+    restart: always
