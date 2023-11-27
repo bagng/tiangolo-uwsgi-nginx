@@ -39,6 +39,19 @@
             })
  </script>
 
+ <a href="/test"> test </a>
+ <p>
+ <div class="container"></div>
+ </p>
+
+ <script>
+            fetch('/test').then(function(response){
+                response.text().then(function(text){
+                    document.querySelector('.container').innerHTML=text;
+                })
+            })
+ </script>
+
  <p><em>Thank you for using nginx.</em></p>
  </body>
  </html>

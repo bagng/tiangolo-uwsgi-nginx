@@ -22,7 +22,7 @@ def handler_test():
         res += 'request.method = {0}<br>\n'.format(request.method)
         res += 'request.headers = {0}<br>\n'.format(str(request.headers))
 
-        res += "<br><br>Hello World from Flask using Python & Docker"
+        res += "<br><br>Hello World from Flask using Python & Docker - main.py"
         return res, 200
     except Exception as e:
         #print(traceback.format_exc())
