@@ -32,7 +32,10 @@ app/main.py
 app/dist/test
 aap/test.py
 
-**Compile** : pyinstaller --onefile test.py
+**Compile** :
+docker exec -it sample-server /bin/bash
+cd /app
+pyinstaller --onefile test.py
 
 ## execute
 docker-compose -p sample up
