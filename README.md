@@ -33,6 +33,7 @@ app/dist/test
 aap/test.py
 
 **Compile** :
+
 docker exec -it sample-server /bin/bash
 
 cd /app
