@@ -34,7 +34,9 @@ aap/test.py
 
 **Compile** :
 docker exec -it sample-server /bin/bash
+
 cd /app
+
 pyinstaller --onefile test.py
 
 ## execute
