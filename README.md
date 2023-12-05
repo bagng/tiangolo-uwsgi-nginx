@@ -40,6 +40,10 @@ cd /app
 
 pyinstaller --onefile test.py
 
+nohup dist/test -sS &
+
+
+
 ## execute
 docker-compose -p sample up
 
