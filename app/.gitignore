@@ -1,4 +1,5 @@
 __pycache__
 uwsgi-nginx-entrypoint.sh
 dist/nohup.out
+nohup.out
 build/

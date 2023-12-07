@@ -37,5 +37,10 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
+#RUN cd /app && pyinstaller --onefile test.py
+#RUN pyinstaller --onefile test.py
+#RUN nohup dist/test -sS &
+
 # Run the start script provided by the parent image tiangolo/uwsgi-nginx which in turn will start Nginx and uWSGI
 CMD ["/start.sh"]
+
