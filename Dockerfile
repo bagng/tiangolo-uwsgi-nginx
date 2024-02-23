@@ -37,10 +37,38 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
+RUN apt install --no-install-recommends -y sudo
+
+USER root
+
+ARG USER_NAME=ubuntu
+ARG USER_ID=1001
+ARG GROUP_ID=1001
+
+ENV USER=${USER_NAME}
+RUN echo "$USER_NAME ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USER_NAME}
+RUN chmod 0440 /etc/sudoers.d/${USER_NAME}
+
+RUN groupadd ${USER_NAME} --gid ${USER_ID}\
+    && useradd -l -m ${USER_NAME} -u ${USER_ID} -g ${USER_ID} -s /bin/bash
+
+#USER ${USER_NAME}
+RUN sudo mkdir -p /app && sudo chmod -R 777 /app
+COPY app /app
+
 #RUN cd /app && pyinstaller --onefile test.py
-#RUN pyinstaller --onefile test.py
-#RUN nohup dist/test -sS &
+WORKDIR /app
+RUN pyinstaller --onefile test.py
+#WORKDIR /app/dist
+#RUN nohup test -sS &
+
+#USER root
+
+# add nohup command
+#RUN echo "cd /app/dist" >> start.sh
+#RUN echo "nohup ./test -sS &" >> start.sh
 
 # Run the start script provided by the parent image tiangolo/uwsgi-nginx which in turn will start Nginx and uWSGI
+COPY start.sh /start.sh
 CMD ["/start.sh"]
 

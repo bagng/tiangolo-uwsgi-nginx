@@ -6,7 +6,7 @@ services:
       dockerfile: ./Dockerfile
     container_name: sample-server
     volumes:
-      - ./app/:/app
+      - ./app/:/app-org
     ports:
       - "80:80"
       - "8080:8080"
