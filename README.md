@@ -2,8 +2,7 @@
 
 Sample project for using "**tiangolo-uwsgi-nginx**".
 
-Link: [Docker Image][docker-image]
-[docker-image]: https://hub.docker.com/r/tiangolo/uwsgi-nginx/ "Docker Image"
+Link: "Docker Image" https://hub.docker.com/r/tiangolo/uwsgi-nginx/
 
 ## Hierarchy is followed.
 ```markdown
