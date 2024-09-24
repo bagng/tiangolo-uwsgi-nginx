@@ -4,9 +4,8 @@ Sample project for using "**tiangolo-uwsgi-nginx**".
 
 [Docker Image](https://hub.docker.com/r/tiangolo/uwsgi-nginx "Docker Image reference")
 
+## Hierarchy is followed.
 ```markdown
-1. ## Hierarchy is followed.
-
 ~+ docker
  ├── app
  │   ├── dist
@@ -25,13 +24,13 @@ Sample project for using "**tiangolo-uwsgi-nginx**".
  └── uwsgi.ini
 ```
 
-1. ## nginx homepage content
+## nginx homepage content
 app/static/index.html
 
-1. ## flask app
+## flask app
 app/main.py
 
-1. ## pyinstaller app
+## pyinstaller app
 app/dist/test
 aap/test.py
 
@@ -46,14 +45,13 @@ pyinstaller --onefile test.py
 nohup dist/test -sS &
 ```
 
-1. ## execute
+## execute
 ```
 docker-compose -p sample up
 ```
 
-1. ## execute daemon
+## execute daemon
 ```
 docker-compose -p sample up -d
 ```
-
-
+   
