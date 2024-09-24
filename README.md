@@ -33,7 +33,7 @@ app/dist/test
 aap/test.py
 
 **Compile** :
-
+```
 docker exec -it sample-server /bin/bash
 
 cd /app
@@ -41,12 +41,16 @@ cd /app
 pyinstaller --onefile test.py
 
 nohup dist/test -sS &
-
-
+```
 
 ## execute
+```
 docker-compose -p sample up
+```
 
 ## execute daemon
+```
 docker-compose -p sample up -d
+```
+
 
