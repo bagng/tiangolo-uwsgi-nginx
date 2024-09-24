@@ -4,8 +4,9 @@ Sample project for using "**tiangolo-uwsgi-nginx**".
 
 [Docker Image](https://hub.docker.com/r/tiangolo/uwsgi-nginx "Docker Image reference")
 
-1. ## Hierarchy is followed.
 ```markdown
+1. ## Hierarchy is followed.
+
 ~+ docker
  ├── app
  │   ├── dist
